@@ -1,7 +1,7 @@
-import { prepackFile } from "https://esm.sh/prepack@0.2.54"
+import { Prepack } from "./deps/prepack.js"
 
-console.log(
-    prepackFile(
-        "a.js",
-    )
-)
+console.log(Prepack.prepackSources([
+    {
+        fileContents: `console.log("hi")`
+    }
+]).code)
